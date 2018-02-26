@@ -1,24 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
+import { BrowserRouter } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
-import Doc from '../route/'
-
+import Admin from './views/index'
 
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component />
+      <BrowserRouter>
+        <Component/>
+      </BrowserRouter>
     </AppContainer>,
     document.getElementById('root'),
   )
 }
 
-render(Doc)
+render(Admin)
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('../route/', () => {
-    render(Doc)
+  module.hot.accept('./views', () => {
+    render(Admin)
   })
 }

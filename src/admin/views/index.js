@@ -1,8 +1,8 @@
 import React from 'react'
-import HeaderBody from '../header'
-import Main from '../../layout/Main'
+import HeaderBody from './header'
+import Main from '../../layout/main'
 
-const Doc = () => (
+const Admin = () => (
   <div>
     <header>
       <HeaderBody/>
@@ -13,4 +13,4 @@ const Doc = () => (
   </div>
 )
 
-export default Doc
+export default Admin

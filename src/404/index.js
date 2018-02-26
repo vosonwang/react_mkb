@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
-import NotFound from '../route/'
+import NotFound from './views'
 
 const render = (Component) => {
   ReactDOM.render(
@@ -20,7 +20,7 @@ render(NotFound)
 
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('../route/', () => {
+  module.hot.accept('./views', () => {
     render(NotFound)
   })
 }

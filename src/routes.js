@@ -1,5 +1,5 @@
-import Admin from 'admin/route'
-import Doc from 'doc/route'
+import Admin from 'admin/views/index'
+import Doc from 'doc/views'
 
 const routes = [
   {
