@@ -3,9 +3,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: ['react-hot-loader/patch', './src/index.js'],
-    doc: ['react-hot-loader/patch', './src/doc.js'],
-    vendor: ['lodash', 'react-dom', 'react-hot-loader', 'antd', 'moment'],
+    admin: ['react-hot-loader/patch', './src/admin/entry/index.js'],
+    doc: ['react-hot-loader/patch', './src/doc/entry/index.js'],
+    notFound: ['react-hot-loader/patch', './src/404/entry/index.js'],
+    vendor: ['lodash', 'react-dom', 'react-hot-loader', 'moment']
   },
   output: {
     filename: '[name].js',
@@ -75,6 +76,18 @@ module.exports = {
               name: './images/[name].[ext]',
             },
           },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader',
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
         ],
       },
     ],
